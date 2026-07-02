@@ -407,6 +407,7 @@ const CLIENTS = [
     name: "Museum Marketing",
     logoUrl: "Hurwitz Creative Logo.png",
     logoAlt: "MM",
+    logoBg: "#000000",
     description: "Museum Marketing Pitch Decks",
     assets: [
       { title: "Unboxing the Museum | Pitch Deck", url: "https://f.io/sle-wsEh", badge: "Deck" }
@@ -418,6 +419,7 @@ const CLIENTS = [
     name: "The Huntington",
     logoUrl: "HungtingtonLogo.png",
     logoAlt: "TH",
+    logoBg: "#000000",
     description: "Japanese Heritage Shōya House — Exhibition Lifecycle Campaign",
     assets: [
       {
@@ -453,6 +455,7 @@ const CLIENTS = [
     name: "Client Name",
     logoUrl: "",
     logoAlt: "CL",
+    logoBg: "#ffffff",
     description: "Campaign or project description",
     assets: [
       { title: "Asset Title", url: "https://app.frame.io/YOUR_LINK", badge: "9:16" },
@@ -465,6 +468,7 @@ const CLIENTS = [
     name: "The Getty",
     logoUrl: "Getty 25 Logo.png",
     logoAlt: "G",
+    logoBg: "#ffffff",
     description: "Getty 25th Project Overview",
     assets: [
       { title: "Project Overview", url: "https://projects.hurwitzcreative.com/getty25", badge: "Link" }
@@ -476,6 +480,7 @@ const CLIENTS = [
     name: "Petersen Automotive Museum",
     logoUrl: "Peterson-Logo-Header.webp",
     logoAlt: "PAM",
+    logoBg: "#ffffff",
     description: "Petersen Automotive Museum Outreach Pitch",
     assets: [
       { title: "Pitch Video", url: "https://f.io/znbv6lYx", badge: "9:16" }
@@ -548,7 +553,7 @@ function renderClient(client, index) {
     ${index > 0 ? '<hr class="section-divider">' : ""}
     <section class="client-block">
       <button class="client-header" type="button" aria-expanded="true">
-        <div class="client-logo-slot${hasLogo ? "" : " no-logo"}">${logoContent}</div>
+      <div class="client-logo-slot${hasLogo ? "" : " no-logo"}" ${client.logoBg ? `style="background:${client.logoBg}"` : ""}>${logoContent}</div>
         <div class="client-info">
           <div class="client-eyebrow">Client</div>
           <h2>${client.name}</h2>
